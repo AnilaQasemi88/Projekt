@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "rm -rf dev-serve && parcel public/index.html --dist-dir dev-serve",
-    "build": "rm -rf build && parcel build public/index.html --dist-dir build --public-url ./",
+    "start": "rm -rf dev-serve && parcel public/main.html --dist-dir dev-serve",
+    "build": "rm -rf build && parcel build public/main.html --dist-dir build --public-url ./",
     "publish": "gh-pages -d build"
   },
   "repository": {

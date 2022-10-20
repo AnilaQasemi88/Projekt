@@ -1,0 +1,67 @@
+@use 'variables';
+
+
+footer{
+    display: grid;
+    justify-content: space-around;
+    grid-template-columns: repeat(3, 350px);
+    grid-template-rows: 300px 70px;
+    font-size: 1.3rem;
+    padding-top: 2em;
+    color: variables.$white;
+    background: linear-gradient(-45deg, #344e41, #588157, #a3b18a, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+
+    .container-5 {
+        a{
+            display: block;
+            color: variables.$white;
+            text-decoration: none;
+            margin: 1em 0;
+            text-align: center;
+        }
+
+        h2{
+            text-align: center;
+        }
+
+        p{
+            line-height: 1.4em;
+        }
+
+        .container-5-1{
+            text-align: center;
+
+            p{
+                display: inline;
+            }
+
+            i{
+                margin: 1em 0;
+            }
+        }
+    }
+
+    .container-5-2{
+        grid-column-start: 1;
+        grid-column-end: 4;
+        text-align: center;
+
+        a{
+            color: variables.$white;
+        }
+      }
+  }
+  
+  @keyframes gradient {
+      0% {
+          background-position: 0% 50%;
+      }
+      50% {
+          background-position: 100% 50%;
+      }
+      100% {
+          background-position: 0% 50%;
+      }
+  }

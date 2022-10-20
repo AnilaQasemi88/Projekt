@@ -1,0 +1,64 @@
+@use 'variables.scss';
+@use 'reset.scss';
+
+.box-nav{
+    background-color: variables.$main-color;
+    width: 1100px;
+    height: variables.$large;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 600px variables.$large;
+    grid-template-rows: 100%;
+
+    nav{
+        position: relative;
+        width: 420px;
+        height: 50px;
+        top: 25px;
+        background-color: variables.$main-color;
+
+        .animation {
+            position: absolute;
+            height: 100%;
+            top: 0;
+            z-index: 0;
+            transition: all .5s ease;
+            border-radius: 8px;
+        }
+        a{
+            margin-top: 15px;
+            width: 100px;
+            font-size: 20px;
+            display: inline-block;
+            position: relative;
+            z-index: 1;
+            text-decoration: none;
+            text-align:center;
+            color: variables.$white;
+            cursor: pointer;
+        }
+        .start-home, a:nth-child(1):hover~.animation {
+            width: variables.$large;
+            transform: translateX(0px);
+            background-color: variables.$green-1;
+        }
+        .start-about, a:nth-child(2):hover~.animation {
+            width: variables.$large;
+            transform: translateX(110px);
+            background-color: variables.$green-2;
+        }
+        .start-kontakt, a:nth-child(3):hover~.animation {
+            width: variables.$large;
+            transform: translateX(210px);
+            background-color: variables.$green-3;
+        }
+        .start-projekt, a:nth-child(4):hover~.animation {
+            width: variables.$large;
+            transform: translateX(310px);
+            background-color: variables.$green-4;
+        }
+    }
+    img{
+        margin: 30px 0 0 400px;
+    }
+}
