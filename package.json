@@ -1,8 +1,7 @@
 {
-  "name": "projekt",
+  "name": "project",
   "version": "1.0.0",
   "description": "Project in October",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "rm -rf dev-serve && parcel public/main.html --dist-dir dev-serve",
