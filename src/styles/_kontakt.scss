@@ -1,0 +1,11 @@
+@use 'variables';
+
+.container-kontakt{
+    background-image: url(../Images/pic11.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: variables.$huge;
+    height: 300px;
+    margin-top: variables.$small;
+}
