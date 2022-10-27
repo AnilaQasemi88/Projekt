@@ -1,11 +1,180 @@
 @use 'variables';
+@use 'mixin.scss';
 
 .container-kontakt{
-    background-image: url(../Images/pic11.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: variables.$huge;
-    height: 300px;
-    margin-top: variables.$small;
+   height: 500px;
+   width: 100%;
+   background-image: url(../Images/pic17.jpg);
+   background-size: cover;
+   background-position:center ;
+   margin-top: variables.$small_em;
+   display: flex;
+   place-content: end;
+   place-items: end;
+   position: relative;
+
+  .kontakt-text {
+    position: relative;
+    width: 20em;
+    height: 5em;
+    bottom: 1.5em;
+    color: variables.$white;
+    text-transform: uppercase;
+    text-align: center; 
+  }
+  h2{
+    background-color: variables.$main-color;
+    height: 1.5em;
+    font-size: 2.5rem;
+    animation: textwelle 3s;
+  }
+
+  @keyframes textwelle {
+    0% {
+      transform: scale(0.1);
+      opacity: 0;
+    }  
+    70% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(0.75);
+      opacity: 1;	
+    }
+  }
+  h3{
+    color: variables.$main-color;
+    background-color: variables.$white;
+    height: 2em;
+  }
 }
+
+.container-2-kontakt{
+  background: url(../Images/pic11.jpg) no-repeat;
+  margin: 2em 0 0 2em;
+
+    p{
+        font-size: variables.$tiny;
+    }
+    
+    form{
+      font-size: variables.$tiny;
+
+      .container {
+        display: block;
+        position: relative;
+        padding-left: 35px;
+        margin-bottom: 12px;
+        cursor: pointer;
+        font-size: 22px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      
+      
+        /* Hide the browser's default radio button */
+        input {
+          position: absolute;
+          opacity: 0;
+          cursor: pointer;
+        }
+        /* Create a custom radio button */
+        .checkmark {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 25px;
+          width: 25px;
+          background-color: #eee;
+          border-radius: 50%;
+        }
+      }    
+          /* On mouse-over, add a grey background color */
+          .container:hover input ~ .checkmark {
+            background-color: #ccc;
+          }
+          
+          /* When the radio button is checked, add a blue background */
+          .container input:checked ~ .checkmark {
+            background-color: variables.$main-color;
+          }
+
+        label{
+            font-weight: variables.$bold;
+        }
+        input::placeholder{
+            font-size: 1.5rem;
+        }
+        // input[type=text und email] in MIXIN:SCSS
+        select{
+            width: 20em;
+            height: 3em;
+            }
+
+        .button{
+          background-color: variables.$green-4;
+          width: 7em;
+          height: 2em;
+          margin: 5px;
+          font-size: variables.$tiny;
+          border-radius: 4px;
+          transition: all 0.5s;
+          cursor: pointer;
+
+          &:hover{
+            background-color: variables.$green-3;
+            
+            span {
+              padding-right: 25px;
+    
+              &:after {
+                opacity: 1;
+                right: 0;
+              }
+            }
+          }
+          
+          span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+
+            &:after {
+              content: '\00bb';
+              position: absolute;
+              
+              opacity: 0;
+              top: 0;
+              right: -20px;
+              transition: 0.5s;
+            }
+          }
+        } 
+    }
+}
+
+@media  only screen and (min-width: 768px) {
+  .kontakt-text {
+            position: relative;
+            width: 20em;
+            height: 5em;
+            bottom: 1.5em;
+            color: variables.$white;
+            text-transform: uppercase;
+            text-align: center;
+            font-size: variables.$small;
+        
+        h2{
+            background-color: variables.$main-color;
+            height: 1.5em;
+        }
+        h3{
+            color: variables.$main-color;
+            background-color: variables.$white;
+            height: 2em;
+        }
+      }
+    }

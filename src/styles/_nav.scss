@@ -3,18 +3,19 @@
 
 .box-nav{
     background-color: variables.$main-color;
-    width: 1100px;
+    width: 40em;
     height: variables.$large;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 600px variables.$large;
-    grid-template-rows: 100%;
-
+    // margin: 0 auto;
+    // display: grid;
+    // grid-template-columns: 600px variables.$large;
+    // grid-template-rows: 100%;
+    border-radius: 1em;
+    
     nav{
         position: relative;
-        width: 420px;
-        height: 50px;
-        top: 25px;
+        width: 40em;
+        height: 3.13em;
+        top: 1.3em;
         background-color: variables.$main-color;
 
         .animation {
@@ -26,9 +27,9 @@
             border-radius: 8px;
         }
         a{
-            margin-top: 15px;
-            width: 100px;
-            font-size: 20px;
+            margin-top: 10px;
+            width: 5em;
+            font-size: 1.6rem;
             display: inline-block;
             position: relative;
             z-index: 1;
@@ -38,27 +39,109 @@
             cursor: pointer;
         }
         .start-home, a:nth-child(1):hover~.animation {
-            width: variables.$large;
-            transform: translateX(0px);
+            width: 7em;
+            transform: translateX(0.1em);
             background-color: variables.$green-1;
         }
         .start-about, a:nth-child(2):hover~.animation {
-            width: variables.$large;
-            transform: translateX(110px);
+            width: 7em;
+            transform: translateX(8.8em);
             background-color: variables.$green-2;
         }
-        .start-project, a:nth-child(3):hover~.animation {
-            width: variables.$large;
-            transform: translateX(210px);
+        .start-kontakt, a:nth-child(3):hover~.animation {
+            width: 7em;
+            transform: translateX(17em);
             background-color: variables.$green-3;
         }
-        .start-kontakt, a:nth-child(4):hover~.animation {
-            width: variables.$large;
-            transform: translateX(310px);
+        .start-presse, a:nth-child(4):hover~.animation {
+            width: 7em;
+            transform: translateX(25em);
             background-color: variables.$green-4;
         }
     }
     img{
-        margin: 30px 0 0 400px;
+        margin: -2em 0 0 34em;
+        animation: perspect 4s infinite linear;
+        @keyframes perspect {
+        0% {transform:perspective(300px) rotateY(0deg)}
+        25% {transform:perspective(300px) rotateY(90deg)}
+        50% {transform:perspective(300px) rotateY(180deg)}
+        75% {transform:perspective(300px) rotateY(270deg)}
+        100% {transform:perspective(300px) rotateY(360deg)}
+     }
+    }
+}
+
+@media  only screen and (min-width: 768px) {
+    
+    .box-nav{
+        background-color: variables.$main-color;
+        width: 80em;
+        height: variables.$large;
+       margin: 0 auto;
+        display: grid;
+        grid-template-columns: 600px variables.$large;
+        grid-template-rows: 100%;
+        border-radius: 1em;
+        
+        nav{
+            position: relative;
+            width: 60em;
+            height: 3.13em;
+            top: 1em;
+            background-color: variables.$main-color;
+    
+            .animation {
+                position: absolute;
+                height: 100%;
+                top: 0;
+                z-index: 0;
+                transition: all .5s ease;
+                border-radius: 8px;
+            }
+            a{
+                margin-top: 10px;
+                width: 5em;
+                font-size: 2rem;
+                display: inline-block;
+                position: relative;
+                z-index: 1;
+                text-decoration: none;
+                text-align:center;
+                color: variables.$white;
+                cursor: pointer;
+            }
+            .start-home, a:nth-child(1):hover~.animation {
+                width: 10em;
+                transform: translateX(0.1em);
+                background-color: variables.$green-1;
+            }
+            .start-about, a:nth-child(2):hover~.animation {
+                width: 10em;
+                transform: translateX(10.2em);
+                background-color: variables.$green-2;
+            }
+            .start-kontakt, a:nth-child(3):hover~.animation {
+                width: 10em;
+                transform: translateX(20.6em);
+                background-color: variables.$green-3;
+            }
+            .start-presse, a:nth-child(4):hover~.animation {
+                width: 10em;
+                transform: translateX(30.6em);
+                background-color: variables.$green-4;
+            }
+        }
+        img{
+            margin: 2em 0 0 35em;
+            animation: perspect 4s infinite linear;
+            @keyframes perspect {
+            0% {transform:perspective(300px) rotateY(0deg)}
+            25% {transform:perspective(300px) rotateY(90deg)}
+            50% {transform:perspective(300px) rotateY(180deg)}
+            75% {transform:perspective(300px) rotateY(270deg)}
+            100% {transform:perspective(300px) rotateY(360deg)}
+         }
+        }
     }
 }

@@ -1,0 +1,41 @@
+
+
+// layout.scss container-1-start
+
+@mixin container-1-index {
+    text-align: center;
+    margin-top: 8em;
+}
+
+.container-1-4{
+            
+    grid-area: 4 / 1 / 4 / 2;
+    @include container-1-index;
+}
+.container-1-5{
+
+    grid-area: 4 / 2 / 4 / 3;
+    @include container-1-index;
+}
+.container-1-6{
+
+    grid-area: 4 / 3 / 4 / 4;
+    @include container-1-index;
+}
+
+// layout.scss container-1-end
+
+@mixin form-kontakt-input {
+    width: 20em;
+    line-height: 3em;
+}
+
+form{
+    input[type=text]{
+        @include form-kontakt-input;
+    }
+    input[type=email]{
+        @include form-kontakt-input;
+    }
+    
+}
