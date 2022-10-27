@@ -1,0 +1,26 @@
+.container-1-4 {
+  grid-area: 4/1/4/2;
+  text-align: center;
+  margin-top: 8em;
+}
+
+.container-1-5 {
+  grid-area: 4/2/4/3;
+  text-align: center;
+  margin-top: 8em;
+}
+
+.container-1-6 {
+  grid-area: 4/3/4/4;
+  text-align: center;
+  margin-top: 8em;
+}
+
+form input[type=text] {
+  width: 20em;
+  line-height: 3em;
+}
+form input[type=email] {
+  width: 20em;
+  line-height: 3em;
+}/*# sourceMappingURL=mixin.css.map */

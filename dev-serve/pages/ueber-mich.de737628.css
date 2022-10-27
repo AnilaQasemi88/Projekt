@@ -447,6 +447,7 @@ main .hero-image .text-h h2 span {
 .pages .section-4 p span {
   opacity: 0;
   filter: blur(4px);
+  margin-left: 20px;
 }
 
 .pages .section-4 p span:nth-child(1) {
